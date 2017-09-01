@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:gravity="start|center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:text="Feedback"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_19sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+   <LinearLayout
+       android:id="@+id/lnr_autocomplete"
+       android:layout_width="match_parent"
+       android:layout_below="@+id/ll1"
+       android:paddingTop="@dimen/_10sdp"
+       android:paddingBottom="@dimen/_10sdp"
+       android:background="#EAF9FF"
+       android:orientation="vertical"
+       android:layout_height="wrap_content">
+
+       <AutoCompleteTextView
+           android:id="@+id/simpleAutoCompleteTextView"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_35sdp"
+           android:paddingLeft="@dimen/_10sdp"
+           android:background="@drawable/autocomplete_bg"
+           android:layout_marginLeft="@dimen/_15sdp"
+           android:drawableRight="@mipmap/search_icon"
+           android:paddingRight="@dimen/_20sdp"
+           android:layout_marginRight="@dimen/_15sdp"
+           android:hint="Enter Customer Name"
+           android:textColorHint="#BDBDBD" />
+   </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/lnr_data_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnr_autocomplete"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:textColor="#292929"
+          android:textSize="@dimen/_17sdp"
+          android:text="Feedback Results"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:layout_below="@+id/lnr_data_header">
+        </ListView>
+
+
+    <LinearLayout
+        android:id="@+id/lnr_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/lnr_bike"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:background="@mipmap/excalm_round"
+            android:orientation="horizontal">
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_saergg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/textcolor"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="FOR SEARCH"/>
+
+
+        <View
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:background="#d8d8d8">
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textcolor"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="!! No Customer Data Available"/>
+
+        <!-- <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="@dimen/_12sdp"
+             android:layout_marginTop="@dimen/_12sdp"
+             android:text="Please make the search more relevant to"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textSize="@dimen/_12sdp"
+             android:layout_marginTop="@dimen/_5sdp"
+             android:text="get the contents.."
+             />-->
+    </LinearLayout>
+
+
+    <!-- FOOTER -->
+    <LinearLayout android:id="@+id/bottom_menu"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_alignParentBottom="true">
+        <!-- menu bar -->
+        <include layout="@layout/footer_privacyplolicy" />
+    </LinearLayout>
+</RelativeLayout>

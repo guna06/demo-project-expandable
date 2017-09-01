@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'sqadmin'
+            keyPassword '123456'
+            storeFile file('E:/BACKUP/SqMobileAdmin/sqadmin.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.sqindiaadmin.com.sqmobileadmin"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 3
+        versionName "2.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            zipAlignEnabled true
+        }
+    }
+    productFlavors {
+    }
+}
+
+repositories {
+
+    maven { url 'https://repo.commonsware.com.s3.amazonaws.com' }
+    maven { url 'https://jitpack.io' }
+    maven { url "https://s3.amazonaws.com/repo.commonsware.com" }
+    mavenCentral()
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.intuit.sdp:sdp-android:1.0.3'
+    compile 'com.github.GcsSloop:FontsManager:v1.0.0'
+    compile 'com.jaredrummler:material-spinner:1.1.0'
+    compile 'org.jsoup:jsoup:1.8.3'
+}

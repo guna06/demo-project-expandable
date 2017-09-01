@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="9.9"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@+id/lblListSno"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sdp"
+        android:layout_weight="1.4"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:layout_gravity="center"
+        android:text="1"
+        android:textColor="#1C1C1C" />
+
+
+    <TextView
+        android:id="@+id/lblListName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sdp"
+        android:layout_weight="2.1"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:singleLine="true"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:text="Gunasundari"
+        android:textColor="#1C1C1C" />
+
+    <TextView
+        android:id="@+id/lblListMobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.2"
+        android:textSize="@dimen/_11sdp"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:singleLine="true"
+        android:paddingTop="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:layout_gravity="center"
+        android:text="7550168101"
+        android:textColor="#1C1C1C" />
+
+    <TextView
+        android:id="@+id/lblListEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11sdp"
+        android:layout_weight="3"
+        android:singleLine="true"
+        android:paddingTop="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:layout_gravity="center"
+        android:text="guna@sqindia.net"
+        android:textColor="#1C1C1C" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@mipmap/view_eye"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#009FE3"/>
+
+</LinearLayout>
